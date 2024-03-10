@@ -28,19 +28,51 @@ const initialPostsData = [
 
 const PostComponent = ({ username, location, imageUri, profile, time }) => {
   return (
-    <View style={{ padding: 15, flexDirection: 'column', gap: 15 }}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
-          <Image source={{ uri: profile }} style={{ width: 40, height: 40, borderRadius: 20, borderColor: '#f00', borderWidth: 2 }} />
+    <View style={ {
+      padding: 15,
+      flexDirection: 'column',
+      gap: 15
+    } }>
+      <View style={ {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+      } }>
+        <View style={ {
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: 5
+        } }>
+          <Image source={ { uri: profile } } style={ {
+            width: 40,
+            height: 40,
+            borderRadius: 20,
+            borderColor: '#f00',
+            borderWidth: 2
+          } } />
 
           <View>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', letterSpacing: 0.5 }}>{username}</Text>
-            <Text style={{fontSize: 15, color: '#777'}}>{location}</Text>
+            <Text style={ {
+              fontSize: 18,
+              fontWeight: 'bold',
+              letterSpacing: 0.5
+            } }>{ username }</Text>
+            <Text style={ {
+              fontSize: 15,
+              color: '#777'
+            } }>{ location }</Text>
           </View>
         </View>
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
-          <Text style={{ fontSize: 14, color: '#777' }}>{time}</Text>
+        <View style={ {
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: 5
+        } }>
+          <Text style={ {
+            fontSize: 14,
+            color: '#777'
+          } }>{ time }</Text>
 
           <TouchableOpacity>
             <Ionicons name="ellipsis-vertical" size={18} color="black" />
@@ -51,12 +83,24 @@ const PostComponent = ({ username, location, imageUri, profile, time }) => {
       <View>
         <Image
           source={{ uri: imageUri }}
-          style={{ width: '100%', height: 250, borderRadius: 10 }}
+          style={ {
+            width: '100%',
+            height: 250,
+            borderRadius: 10
+          } }
         />
       </View>
 
-      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+      <View style={ {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+      } }>
+        <View style={ {
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: 10
+        } }>
           <TouchableOpacity>
             <Ionicons name="heart" size={26} color="#f00" />
           </TouchableOpacity>

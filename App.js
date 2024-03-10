@@ -5,7 +5,6 @@ import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from './screens/HomeScreen';
 import ActivityScreen from './screens/NotificationScreen';
 import SearchScreen from './screens/SearchScreen';
-import FollowerScreen from './screens/FollowerScreen';
 import ProfileScreen from './screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
@@ -25,8 +24,6 @@ export default function App() {
               iconName = focused ? 'notifications' : 'notifications-outline';
             } else if (route.name === 'Search') {
               iconName = focused ? 'search' : 'search-outline';
-            } else if (route.name === 'Followers') {
-              iconName = focused ? 'people' : 'people-outline'; 
             } else if (route.name === 'Profile') {
               iconName = focused ? 'person' : 'person-outline';
             }
@@ -40,7 +37,6 @@ export default function App() {
         }}
       >
         <Tab.Screen name="Home" component={ HomeScreen } />
-        <Tab.Screen name="Followers" component={FollowerScreen} /> 
         <Tab.Screen name="Search" component={ SearchScreen } />
         <Tab.Screen name="Notification" component={ActivityScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />

@@ -23,11 +23,25 @@ const HeaderComponent = () => {
   }, []);
 
   return (
-    <View style={{ paddingTop: 15, paddingHorizontal: 15, paddingBottom: 10 }}>
+    <View style={ {
+      paddingTop: 15,
+      paddingHorizontal: 15,
+      paddingBottom: 10
+    } }>
       <ScrollView horizontal={true}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 15 }}>
+        <View style={ {
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: 15
+        } }>
           {images.map((imageUrl, index) => (
-            <Image key={index} source={{ uri: imageUrl }} style={{ width: 70, height: 70, borderRadius: 35, borderColor: '#f00', borderWidth: 2 }} />
+            <Image key={ index } source={ { uri: imageUrl } } style={ {
+              width: 70,
+              height: 70,
+              borderRadius: 35, 
+              borderColor: '#f00',
+              borderWidth: 2
+            } } />
           ))}
         </View>
       </ScrollView>
